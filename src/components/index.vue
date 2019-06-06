@@ -523,6 +523,9 @@ export default {
 	methods:{
 		//搜索
 		searchFun(){
+			if(this.search==''){
+				return;
+			}
 			let code=Base64.encode(this.search);
 			//console.log(code)
 			this.$router.push({path:'/search/'+code});
@@ -1476,6 +1479,12 @@ function getLocation(obj){
 		font-family:PingFang-SC-Bold;
 		font-weight:bold;
 		color:rgba(126,140,127,1);
+	}
+	.goodsName p{
+		width:4.58rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.goodsName p:last-child{
 		width:4.58rem;

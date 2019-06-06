@@ -349,7 +349,7 @@ function getMoreStyle(obj){
     }; 
 	obj.$ajax(obj.$store.state.localIP+'stylePai/listDesignByStylePai','post',data,function(res){
 		//console.log(res,4)
-		obj.styleList.map(v=>{
+		res.data.map(v=>{
 			return v.details=v.details.replace(/[\s\r\n]/g,"");
 		})
 		obj.styleList=res.data || [];

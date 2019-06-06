@@ -103,8 +103,8 @@ module.exports = {
         staticDir: path.join(__dirname, '../dist'),
         
         // 对应自己的路由文件，比如index有参数，就需要写成 /index/param1。
-        routes: ['/', '/stylePai','/stylePai/info/param1','/floor','/house/param1','/goodsThing','/goods/info/param1','/aboutUs','/case','/programme/param1','/search/param1','/download','/storeList'],
-        //routes: ['/wap','/wap/floor','/wap/house/param1','/wap/programme/param1','/wap/stylePai','/wap/stylePai/info/param1','/wap/goodsThing','/wap/goods/info/param1','/wap/aboutUs','/wap/case','/wap/search/param1','/wap/chat','/wap/storeList'],
+        //routes: ['/', '/stylePai','/stylePai/info/param1','/floor','/house/param1','/goodsThing','/goods/info/param1','/aboutUs','/case','/programme/param1','/search/param1','/download','/storeList'],
+        routes: ['/wap','/wap/floor','/wap/house/param1','/wap/programme/param1','/wap/stylePai','/wap/stylePai/info/param1','/wap/goodsThing','/wap/goods/info/param1','/wap/aboutUs','/wap/case','/wap/search/param1','/wap/chat','/wap/storeList'],
        
         // 这个很重要，如果没有配置这段，也不会进行预编译
         renderer: new Renderer({
@@ -113,7 +113,7 @@ module.exports = {
               foo: 'bar'
             },
             headless: false,
-            defaultViewport:{width:1366,height:768},
+            //defaultViewport:{width:1366,height:768},
             // 在 main.js 中 document.dispatchEvent(new Event('render-event'))，两者的事件名称要对应上。
             renderAfterDocumentEvent: 'render-event'
         })

@@ -109,7 +109,7 @@ export default {
 		//跳转楼盘列表
 		goHouse(houseId){
 			let code=Base64.encode(houseId);
-			this.$router.push({path:'/floor/house/'+code})
+			this.$router.push({path:'/house/'+code})
 		},
 		//跳转风格
 		goStyle(uuid){

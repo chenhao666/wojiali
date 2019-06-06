@@ -318,7 +318,10 @@ function getGoodList(obj){
 					if(goodsTypeList[j].goodsInfos){
 						let goodsInfos=goodsTypeList[j].goodsInfos;
 						for(let x=0;x<goodsInfos.length;x++){
-							if(arr.length<4){								
+							if(arr.length<4){	
+								if(goodsInfos[x].goodsImages.indexOf(',')>0){
+									goodsInfos[x].goodsImages=goodsInfos[x].goodsImages.split(',')[0]
+								}
 								arr.push(goodsInfos[x]);
 							}
 						}

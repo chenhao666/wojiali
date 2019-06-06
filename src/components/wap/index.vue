@@ -32,7 +32,7 @@
 			</div>
 			
 			<!--与众不同-->
-			<div class="stylePaiItem unusual" @click="goProgramme(internetCelebrity.uuid)" :style="'background:url('+unusual.coverPic+') no-repeat center center;'">
+			<div class="stylePaiItem unusual" @click="goProgramme(unusual.uuid)" :style="'background:url('+unusual.coverPic+') no-repeat center center;'">
 				<div class="dec">
 					<h1><span>与众不同</span> | {{ unusual.designName }}</h1>
 					<h2>{{ unusual.details }}</h2>
@@ -324,6 +324,7 @@
 		margin-top: 0.5rem;
 		border-radius:0.2rem;
 		position: relative;
+		background-size:cover !important;
 	}
 	.stylePaiItem .dec{
 		position: absolute;
@@ -387,6 +388,9 @@
 		background-size:100% auto !important;
 		border-radius:20px;
 		width: 90%;
+	}
+	.floor_swipper .swiper-slide{
+		background-size:cover !important;
 	}
 	.swiper-container .dec{
 		position: absolute;

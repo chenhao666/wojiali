@@ -145,6 +145,9 @@ export default {
 	methods:{
 		//搜索
 		searchFun(){
+			if(this.search==''){
+				return;
+			}
 			let code=Base64.encode(this.search);
 			//console.log(code)
 			this.$router.push({path:'/search/'+code});
